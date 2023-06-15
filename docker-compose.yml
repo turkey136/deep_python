@@ -1,0 +1,12 @@
+version: "3"
+services:
+  app:
+    container_name: "python_machine_learning"
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    image: python_machine_learning
+    volumes:
+      - $PWD:/home/DeepLearning
+      - ./src:/home/DeepLearning/src
+    tty: true
